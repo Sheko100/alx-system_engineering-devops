@@ -3,3 +3,4 @@ The "1-listit" script file ==> lists the directories/files in the current workin
 The "2-bring_me_home" script file ==> changes the directory to the user's home directory
 The "3-listfiles" script file ==> lists the directories/files in long format
 The "4-listmorefiles" script file ==> list the directories/files including the hidden ones in long format
+The "5-listfilesdigitonly" script file ==> displays user, group ids, and hidden files in long format
