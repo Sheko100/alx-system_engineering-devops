@@ -6,4 +6,5 @@ The "4-listmorefiles" script file ==> list the directories/files including the h
 The "5-listfilesdigitonly" script file ==> displays user, group ids, and hidden files in long format
 The "6-firstdirectory" script file ==> Creates a directory named "my_first_directory" in the "tmp" directory
 The "7-movethatfile" script file ==> moves the "betty" file from "tmp" to "my_first_directory" directory
-The "8-firstdelete" script file ==> delets the "betty" file from the "my_first_directory" directory
+The "8-firstdelete" script file ==> deletes the "betty" file from the "my_first_directory" directory
+The "9-firstdirdeletion" script file ==> deletes the "my_first_directory" from the "tmp" directory
