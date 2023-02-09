@@ -5,3 +5,4 @@ The "3-new_owner" script file ==> changes the owner of the file hello to the use
 The "4-empty" script file ==> creates an empty file called hello
 The "5-execute" script file ==> adds execute permission to the owner of the file hello
 The "6-multiple_permissions" script file ==> adds execute permission to the owner and the group owner, and read permission to other users, to the file hello
+The "7-everybody" script file ==> adds execution permission to the owner, the group owner and the other users, to the file hello
