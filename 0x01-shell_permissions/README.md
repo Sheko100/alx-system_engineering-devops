@@ -9,3 +9,4 @@ The "7-everybody" script file ==> adds execution permission to the owner, the gr
 The "8-James_Bond" script file ==> sets no permssion for owner, no permisson for group, and all the permissions for everybody else to the "hello" file
 The "9-John_Doe" script file ==> sets the mode of the file hello to rwxr-x-wx
 The "10-mirror_permissions" script file ==> sets the mode of the file hello the same as olleh’s mode
+The "11-directories_permissions" script file ==> adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users, and regular files won't be changed
