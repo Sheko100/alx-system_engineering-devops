@@ -10,3 +10,4 @@ The "8-firstdelete" script file ==> deletes the "betty" file from the "my_first_
 The "9-firstdirdeletion" script file ==> deletes the "my_first_directory" from the "tmp" directory
 The "10-back" script file ==> changes the working directory back to the previous one
 The "11-lists" script file ==> displays the all the directories/files including hidden ones in the current working directory, the parent directory and the "boot" directory in long format
+The "12-file_type" script file ==> dispalys the type of the "iamafile" file which is in the "tmp" directory
