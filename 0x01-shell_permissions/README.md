@@ -12,3 +12,4 @@ The "10-mirror_permissions" script file ==> sets the mode of the file hello the 
 The "11-directories_permissions" script file ==> adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users, and regular files won't be changed
 The "12-directory_permissions" script file ==> creates a directory called my_dir with permissions 751 in the working directory
 The "13-change_group" script file ==> changes the group owner to school for the file hello
+The "100-change_owner_and_group" script file ==> changes the owner to vincent and the group owner to staff for all the files and directories in the working directory
