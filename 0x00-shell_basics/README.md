@@ -13,3 +13,4 @@ The "11-lists" script file ==> displays the all the directories/files including 
 The "12-file_type" script file ==> dispalys the type of the "iamafile" file which is in the "tmp" directory
 The "13-symbolic_link" script file ==> creates a symbolic link to "/bin/ls" named "__ls__"
 The "14-copy_html" script file ==> copies all the html files from the current directory to the parent directory considering if the files are older or missing in the destination directory
+The "100-lets_move" script file ==> moves all files beginning with an uppercase letter to the directory /tmp/u
