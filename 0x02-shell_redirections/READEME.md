@@ -4,3 +4,4 @@ The "2-hellofile" script file ==> displays the content of the "/etc/passwd" file
 The "3-twofiles" script file ==> displays the content of /etc/passwd and /etc/hosts
 The "4-lastlines" script file ==> displays the last 10 lines of "/etc/passwd"
 The "5-firstlines" script file ==> displays the first 10 lines of "/etc/passwd"
+The "6-third_line" script file ==> displays the third line of the file iacta
