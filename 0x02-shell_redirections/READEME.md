@@ -15,3 +15,4 @@ The "13-unique" script file ==> takes a list of words as input and prints only w
 The "14-findthatword" script file ==> displays lines containing the pattern “root” from the file /etc/passwd
 The "15-countthatword" script file ==> displays the number of lines that contain the pattern “bin” in the file /etc/passwd
 The "16-whatsnext" script file ==> displays lines containing the pattern “root” and 3 lines after them in the file /etc/passwd
+The "17-hidethisword" script file ==> displays all the lines in the file /etc/passwd that do not contain the pattern “bin”
