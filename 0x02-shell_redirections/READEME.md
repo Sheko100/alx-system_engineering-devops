@@ -18,3 +18,4 @@ The "16-whatsnext" script file ==> displays lines containing the pattern “root
 The "17-hidethisword" script file ==> displays all the lines in the file /etc/passwd that do not contain the pattern “bin”
 The "18-letteronly" script file ==> displays all lines of the file /etc/ssh/sshd_config starting with a letter
 The "19-AZ" script file ==> replaces all characters A and c from input to Z and e respectively
+The "20-hiago" script file ==> removes all letters c and C from input
