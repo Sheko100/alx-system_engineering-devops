@@ -13,4 +13,6 @@ The "11-binary_to_decimal" script file ==> converts a number from base 2 to base
 The "12-combinations" script file ==> prints all possible combinations of two letters, except oo
 The "13-print_float" script file ==> prints a number with two decimal places
 The "100-decimal_to_hexadecimal" script file ==> converts a number from base 10 to base 16
-The "101-rot13" script file ==> that encodes and decodes text using the rot13 encryption. Assume ASCII
+The "101-rot13" script file script file ==> that encodes and decodes text using the rot13 encryption. Assume ASCII
+The "102-odd" script file script file ==> prints every other line from the input, starting with the first line
+The "103-water_and_stir" script file ==>  adds the two numbers stored in the environment variables WATER and STIR and prints the result
