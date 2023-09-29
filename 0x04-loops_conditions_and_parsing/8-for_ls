@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Script to display the name after the first dash of the content of
+# the current directory
+
+content="$(ls)"
+for obj in $content
+do
+	echo "${obj#*-}"
+done
+
