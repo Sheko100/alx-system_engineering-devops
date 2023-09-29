@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Script to display the lines that conatin "bash" of the processes info
+# shellcheck disable=SC2009
+
+ps -AH u | grep bash
