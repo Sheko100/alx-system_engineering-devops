@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script to display the content of the "/etc/passwd" file
+
+file="/etc/passwd"
+
+if [ -e $file ]
+then
+	echo "$(cut -d ":" -f 1 $file)::"
+fi
