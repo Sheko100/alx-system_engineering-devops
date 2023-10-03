@@ -1,1 +1,20 @@
 #!/usr/bin/env bash
+# Script to read "/etc/passwd" file and printing a story of it
+
+file="/etc/passwd"
+declare -a fields
+
+if [ -e $file ]
+then
+	while IFS=: read -r -a fields
+	do
+		name=${fields[0]}
+		pass=${fields[1]}
+		usrid=${fields[2]}
+		grpid=${fields[3]}
+		usrinfo=${fields[4]}
+		home=${fields[5]}
+		cmdsh=${fields[6]}
+		echo "The user $name is part of the $grpid gang, lives in $home and rides $cmdsh. $usrid's place is protected by the passcode $pass, more info about the user here: $usrinfo"
+	done < $file
+fi
