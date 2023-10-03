@@ -5,5 +5,5 @@ file="/etc/passwd"
 
 if [ -e $file ]
 then
-	echo "$(cut -d ":" -f 1 $file)::"
+	cut -d : -f 1,3,6 $file
 fi
