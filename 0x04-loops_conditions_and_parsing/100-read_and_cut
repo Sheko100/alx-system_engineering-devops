@@ -3,7 +3,10 @@
 
 file="/etc/passwd"
 
-if [ -e $file ]
+if [ -e "$file" ]
 then
-	cut -d : -f 1,3,6 $file
+	while read -r line
+	do
+		echo "$line" | cut -d : -f 1,3,6
+	done < "$file"
 fi
