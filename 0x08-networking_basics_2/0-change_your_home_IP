@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Script to change the hosts file
 
-sed -i "s/127.*.*.*    localhost/127.0.0.2    localhost/" /etc/hosts
+sed -i "s/127.*.*.*    localhost/127.0.0.2\tlocalhost/" /etc/hosts
 
 if grep -q facebook.com /etc/hosts 
 then
-	sed -i "s/*.*.*.*    facebook.com/8.8.8.8    facebook.com/" /etc/hosts
+	sed -i "s/*.*.*.*\tfacebook.com/8.8.8.8\tfacebook.com/" /etc/hosts
 else
-	sed -i "1s/^/8.8.8.8    facebook.com\n/" /etc/hosts
+	sed -i "1s/^/8.8.8.8\tfacebook.com\n/" /etc/hosts
 fi
