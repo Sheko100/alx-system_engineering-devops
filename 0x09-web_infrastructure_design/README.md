@@ -1,1 +1,1 @@
-# Project about the Web Infastructure design
+# Project about the Web Infrastructure design
