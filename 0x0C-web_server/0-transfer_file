@@ -12,8 +12,8 @@ username="$3"
 keypath="$4"
 if [ -n "$keypath" ]
 then
-	scp -i "$keypath" -o StrictHostKeyChecking=no "$file" "$username"@"$ip":/home/ubuntu/"$file"
+	scp -i "$keypath" -o StrictHostKeyChecking=no "$file" "$username"@"$ip":~/
 else
-	scp -o StrictHostKeyChecking=no "$file" "$username"@"$ip":/home/ubuntu/"$file"
+	scp -o StrictHostKeyChecking=no "$file" "$username"@"$ip":~/
 fi
 
