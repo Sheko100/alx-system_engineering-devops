@@ -11,4 +11,4 @@ ip="$2"
 username="$3"
 keypath="$4"
 
-scp -i $keypath -o StrictHostKeyChecking=no $file $username@$ip:/home/ubuntu/$file
+scp -i "$keypath" -o StrictHostKeyChecking=no "$file" "$username"@"$ip":/home/ubuntu/"$file"
