@@ -3,4 +3,5 @@
 apt update;
 apt -y install nginx;
 echo "Hello World!" > /var/www/html/index.nginx-debian.html;
-/etc/init.d/nginx reload;
+sed "s/^\tlisten [0-9]\+/\tlisten 80/" /etc/nginx/sites-enabled/default;
+nginx -s reload;
