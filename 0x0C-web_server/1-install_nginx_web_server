@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Installs nginx and modify its root index page content
-apt update;
-apt -y install nginx;
-echo "Hello World!" > /var/www/html/index.nginx-debian.html;
-sed "s/^\tlisten [0-9]\+/\tlisten 80/" /etc/nginx/sites-enabled/default;
-nginx -s reload;
+apt update
+apt -y install nginx
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sed "s/^\tlisten [0-9]\+/\tlisten 80/" /etc/nginx/sites-enabled/default
+nginx -s reload
