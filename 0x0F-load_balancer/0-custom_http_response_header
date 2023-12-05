@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Configures the server to add a custom header with the http response
-sed -i "s/^server {/server {\n\tadd_header X-Served-By \$hostname;/" /etc/nginx/sites-enabled/default
+grep -q "X-Served-By" /etc/nginx/sites-enabled/default || sed -i "s/^server {/server {\n\tadd_header X-Served-By \$hostname;/" /etc/nginx/sites-enabled/default
 service nginx reload
