@@ -2,4 +2,4 @@
 # Configures custom 404 page
 echo "Ceci n'est pas une page" > /var/www/html/custom_404.html;
 sed -i "s/^server {/server {\n\terror_page 404 \/custom_404.html;/g" /etc/nginx/sites-enabled/default;
-systemctl restart nginx;
+nginx -s reload;
