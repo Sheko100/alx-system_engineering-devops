@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # Configures custom 404 page
+apt-get update > /dev/null
+apt-get install nginx > /dev/null
+service nginx start
+cfg="/etc/nginx/sites-enabled/default"
 echo "Ceci n'est pas une page" > /var/www/html/custom_404.html;
-sed -i "s/^server {/server {\n\terror_page 404 \/custom_404.html;/g" /etc/nginx/sites-enabled/default;
+grep -q "error_page 404" "$cfg" || sed -i "s/^server {/server {\n\terror_page 404 \/custom_404.html;/g" "$cfg"
 nginx -s reload;
