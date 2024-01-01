@@ -25,7 +25,7 @@ exec {'Initializing root page':
 }
 
 exec {'Redirect with 301':
-  command => "sed -i -E 's|^\tlocation / \{|&\n\n\t\tlocation /redirect_me/ {\n\t\t\treturn 301 https://linkedin.com/in/shaker-sharabi/;\n\t\t}\n|' /etc/nginx/sites-enabled/default",
+  command => "sed -i -E 's|^\tlocation / \{|&\n\n\t\tlocation /redirect_me {\n\t\t\treturn 301 https://linkedin.com/in/shaker-sharabi/;\n\t\t}\n|' /etc/nginx/sites-enabled/default",
   path    => '/usr/bin/'
 }
 
