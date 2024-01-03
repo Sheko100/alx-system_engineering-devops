@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Module that gets data from API
 """
-from sys import argv
 import csv
 import requests
+from sys import argv
 
 if __name__ == "__main__":
 
