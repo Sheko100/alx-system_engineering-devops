@@ -36,7 +36,7 @@ def recurse(subreddit, hot_list=[]):
         next_page = json["data"]["after"]
         metadata = "{} {}".format(next_page, subreddit)
         for post in posts:
-            posts_titles = post["data"]["title"]
+            posts_titles.append(post["data"]["title"])
         hot_list = hot_list + posts_titles
         lst = recurse(metadata, hot_list)
 
