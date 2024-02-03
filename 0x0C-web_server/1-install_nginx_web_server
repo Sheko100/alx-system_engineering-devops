@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-# Installs nginx and modify its root index page content
-apt update
-apt -y install nginx
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-service nginx start
