@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Installs nginx and writing text to its root html doc
+apt-get update
+apt-get -y install nginx
+service nginx start
+cfg_file='/etc/nginx/sites-enabled/default'
+sed -r -i 's|^(\tlisten [^0-9]*)[0-9]+|\180|' $cfg_file
+service nginx reload
