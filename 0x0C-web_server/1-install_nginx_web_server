@@ -3,6 +3,7 @@
 apt-get update
 apt-get -y install nginx
 service nginx start
+echo 'Hello World!' > /var/www/html/index.nginx-debian.html
 cfg_file='/etc/nginx/sites-enabled/default'
 sed -r -i 's|^(\tlisten [^0-9]*)[0-9]+|\180|' $cfg_file
 service nginx reload
