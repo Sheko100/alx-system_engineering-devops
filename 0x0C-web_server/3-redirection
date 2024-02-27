@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Installs nginx and configures it with particular specifications
+apt-get update
+apt-get -y install nginx
+service nginx start
+echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+cfg_file='/etc/nginx/sites-enabled/default'
+sed -r -i 's|^(\tlisten [^0-9]*)[0-9]+|\180|' $cfg_file
+sed -r -i 's|^(\tlocation /).*$|&\n\n\t\1redirect_me {\n\t\t\treturn 301 https://linkedin.com/in/shaker-sharabi/;\n\t\t}|' $cfg_file
+service nginx reload
