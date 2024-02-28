@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Starts apache service
 echo "ServerName localhost" >> /etc/apache2/apache2.conf
-sudo service apach2 start
+service apach2 start
