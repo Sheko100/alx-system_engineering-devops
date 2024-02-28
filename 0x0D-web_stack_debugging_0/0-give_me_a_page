@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Installs apache and writes content to the root doc
+apt-get update
+apt-get install apache2
+echo 'Hello Holberton' > /var/www/html/index.html
