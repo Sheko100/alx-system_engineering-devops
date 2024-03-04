@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Installs nginx and configures it with particular specifications
+apt-get update > /dev/null
+apt-get -y install nginx > /dev/null
+cfg_file='/etc/nginx/sites-enabled/default'
+sed -r -i 's|^(\tlisten [^0-9]*)[0-9]+|\180|' $cfg_file
+grep -q 'X-Served-By' $cfg_file || sed -r -i 's|^server.*|&\n\tadd_header X-Served-By \$hostname;|' $cfg_file
+service nginx restart
