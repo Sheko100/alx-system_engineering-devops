@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 # Installs HAproxy load balancer and configures it to particular specifications
-apt-get -y install --no-install-recommends software-properties-common > /dev/null
-add-apt-repository -y ppa:vbernat/haproxy-2.8 > /dev/null
-apt-get -y install haproxy=2.8.\* > /dev/null
-frontend="frontend web\n\tmode http\n\tbind :80\n\tdefault_backend static\n"
-backend="backend static\n\tmode http\n\tbalance roundrobin\n\tserver web-01 54.236.48.120:80 check\n\tserver web-02 100.25.146.107:80 check"
+#apt-get -y install --no-install-recommends software-properties-common > /dev/null
+#add-apt-repository -y ppa:vbernat/haproxy-2.8 > /dev/null
+#apt-get -y install haproxy=2.8.\* > /dev/null
+apt-get update
+apt-get -y install haproxy
+frontend="frontend web\n\tmode http\n\tbind :80\n\tdefault_backend nginx_pool\n"
+backend="backend nginx_pool\n\tmode http\n\tbalance roundrobin\n\tserver web-01 54.236.48.120:80 check\n\tserver web-02 100.25.146.107:80 check"
 cfg_file="/etc/haproxy/haproxy.cfg"
 grep -q 'frontend web' "$cfg_file" || echo -e "\n$frontend\n$backend" >> "$cfg_file"
-#grep -q '^ENABLED' '/etc/default/haproxy' || echo 'ENABLED=1' >> '/etc/default/haproxy'
-grep -q '^ENABLED' '/etc/default/haproxy' || sed -i 's|ENABLED=0|ENABLED=1|' '/etc/default/haproxy'
+grep -q '^ENABLED' '/etc/default/haproxy' || echo 'ENABLED=1' >> '/etc/default/haproxy'
 service haproxy restart
