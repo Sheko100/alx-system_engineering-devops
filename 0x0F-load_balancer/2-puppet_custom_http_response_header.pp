@@ -17,7 +17,7 @@ exec { 'listen to 80':
   require => File['config']
 }
 exec { 'custom header':
-  command => 'sed -r -i \'s|^server.*|&\n\tadd_header X-Served-By \$hostname;|\' /etc/nginx/sites-enabled/default',
+  command => '/usr/bin/sed -r -i \'s|^server.*|&\n\tadd_header X-Served-By \$hostname;|\' /etc/nginx/sites-enabled/default',
   unless  => "/usr/bin/grep -q 'X-Served-By' /etc/nginx/sites-enabled/default",
   require => File['config']
 }
