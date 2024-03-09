@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Installs and starts nginx web server
 apt-get update
-apt-get install nginx
+apt-get -y install nginx
 sed -i -r 's|^(\tlisten) [0-9]+|\1 80|' /etc/nginx/sites-enabled/default
 service nginx restart
