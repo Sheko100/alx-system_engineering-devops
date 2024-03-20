@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Dumps mysql databases and makes an archive of it
+sql_dump='backup.sql'
+curr_date=$(date +"%d-%m-%Y")
+arch_name="$curr_date.tar.tgz"
+mysqldump -u root -p "$1" --all-databases > "$sql_dump"
+tar -cf "$sql_dump" "$arch_name"
