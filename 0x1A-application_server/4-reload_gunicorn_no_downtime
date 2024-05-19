@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Reloads Gunicorn.
-pgrep gunicorn | xargs | cut -d ' ' -f 1 | xargs kill -HUP
+main=$(pgrep gunicorn | head -n 1)
+kill -HUP "$main"
