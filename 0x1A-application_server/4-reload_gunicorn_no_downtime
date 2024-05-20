@@ -2,4 +2,4 @@
 # reloads gunicorn gracefully
 main=$(pgrep gunicorn | head -n 1)
 kill -HUP "$main"
-pgrep gunicorn
+echo $(pgrep gunicorn)
