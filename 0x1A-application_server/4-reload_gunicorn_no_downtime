@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 # reloads gunicorn gracefully
-sudo reboot
+main=$(pgrep gunicorn | head -n 1)
+kill -HUP "$main"
+pgrep gunicorn
